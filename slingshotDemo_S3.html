@@ -1,0 +1,51 @@
+<head>
+  <title>Slingshot S3 Demo</title>
+</head>
+
+<body>
+
+  {{> uploaderTemplate}}
+</body>
+
+<template name="uploaderTemplate">
+  <div style="margin:20px;">
+      <h1>Welcome to S3 Multi-image Slingshot Example!</h1>
+      {{> loginButtons}}
+      <br><br>
+      <input id="upload-btn" type="file" multiple="true">
+  </div>
+  {{> myPictures}}
+</template>
+
+
+<template name="progressBar">
+
+  <div class="progress overallProgress" >
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+      <span>{{progress}}% Total Complete</span>
+    </div>
+  </div>
+</template>
+
+<template name="myPictures">
+    {{> progressBar}}
+    {{#each upload_images}}
+       {{> myPicture}}
+    {{/each}}
+
+</template>
+
+<template name="myPicture">
+    <div class="selected-thumb">
+        <span>
+            <div>
+               <img src="{{url}}">
+            </div>
+        </span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+              <span>{{progress}}% Complete</span>
+            </div>
+        </div>
+    </div>
+</template>

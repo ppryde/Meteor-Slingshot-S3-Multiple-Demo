@@ -1,0 +1,43 @@
+/* CSS declarations go here */
+.selected-thumb {
+    text-align: center;
+    background: #c0c0c0;
+    margin: 20px;
+    height:220px;
+    width:200px;
+    float:left;
+overflow: hidden;
+}
+
+.selected-thumb span {
+    display:block;
+    height:200px;
+ }
+
+.selected-thumb span div {
+    position:relative;
+    max-height:90%;
+    max-width:90%;
+    height:200px;
+    top:50%;
+    margin:0 auto;
+}
+.selected-thumb span div img {
+    width:auto;
+    height:auto;
+    max-height:100%;
+    max-width:100%;
+    position:relative;
+    top:-50%;
+    text-align:centre;
+    vertical-align:centre;
+
+}
+
+.overallProgress{
+    clear:both;
+    width:200px;
+    margin:20px;
+    text-align:center;
+    margin-bottom:0px;
+}
