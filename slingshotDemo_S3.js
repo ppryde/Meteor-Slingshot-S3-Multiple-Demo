@@ -25,11 +25,12 @@ if (Meteor.isClient) {
       //for each image we upload
       Session.set('upload_images', []);
 
-      //Check that there is a file or more to be processed
-      if (event.target.files.length>0){
+      //var files = event.target.files;
+      var files = file = $('#upload-btn').get(0).files;
 
-        //set a couple of variables
-        var files = event.target.files;
+      //Check that there is a file or more to be processed
+      if (files.length>0){
+
         var total_files = files.length;
 
         var uploads = _.map(files, function (file) {
